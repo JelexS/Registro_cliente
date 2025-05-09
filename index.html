@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Cliente</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6b37682e4d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Registro de Cliente</h2>
+        <form>
+            <!-- Nombre Completo -->
+            <div class="form-group">
+                <label>Nombre Completo</label>
+                <div class="input-container">
+                    <i class="fas fa-user"></i>
+                    <input type="text" required placeholder="Ej: Jordy Alvarado">
+                </div>
+            </div>
+
+            <!-- Correo Electrónico -->
+            <div class="form-group">
+                <label>Correo Electrónico</label>
+                <div class="input-container">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" required placeholder="Ej: nombre@gmail.com">
+                </div>
+            </div>
+            <!-- Género -->
+            <div class="form-group">
+                <label>Género</label>
+                <div class="input-container">
+                    <i class="fas fa-venus-mars"></i>
+                    <select required>
+                        <option value="" disabled selected>Seleccione</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Número de Cédula -->
+            <div class="form-group">
+                <label>Número de Cédula</label>
+                <div class="input-container">
+                    <i class="fas fa-id-card"></i>
+                    <input type="text" required placeholder="Ej: 1234567890" pattern="[0-9]{10}" title="Ingrese 10 dígitos">
+                </div>
+            </div>
+
+            <!-- País -->
+            <div class="form-group">
+                <label>País</label>
+                <div class="input-container">
+                    <i class="fas fa-globe-americas"></i>
+                    <select required>
+                        <option value="" disabled selected>Seleccione</option>
+                        <option value="ecuador">Ecuador</option>
+                        <option value="colombia">Colombia</option>
+                        <option value="peru">Perú</option>
+                        <option value="mexico">México</option>
+                        <option value="argentina">Argentina</option>
+                    </select>
+
+                </div>
+            </div>
+
+            <!-- Teléfono -->
+            <div class="form-group">
+                <label>Teléfono</label>
+                <div class="input-container">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" required placeholder="Ej: 0991234567">
+                </div>
+            </div>
+
+            <!-- Dirección -->
+            <div class="form-group">
+                <label>Dirección</label>
+                <div class="input-container">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" required placeholder="Ej: Av. Principal 123">
+                </div>
+            </div>
+
+            <!-- Fecha de Nacimiento -->
+            <div class="form-group">
+                <label>Fecha de Nacimiento</label>
+                <div class="input-container">
+                    <i class="fas fa-calendar-alt"></i>
+                    <input type="date" required>
+                </div>
+            </div>
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
+</body>
+</html>
