@@ -10,91 +10,95 @@
 <body>
     <div class="form-container">
         <h2>Registro de Cliente</h2>
-        <form>
+        <form id="registroForm">
             <!-- Nombre Completo -->
             <div class="form-group">
-                <label>Nombre Completo</label>
+                <label for="nombre">Nombre Completo</label>             
                 <div class="input-container">
                     <i class="fas fa-user"></i>
-                    <input type="text" required placeholder="Ej: Jordy Alvarado">
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej: Jordy Alvarado">
+                    <div class="error-message" id="nombreError"></div>
                 </div>
+            </div>
+            <!-- Correo Electrónico -->
+            <label for="email">Correo Electrónico</label>
+            <div class="form-group">
+                <div class="input-container">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" name="email" required placeholder="Ej: usuario@dominio.com">
+                <div class="error-message" id="emailError"></div>
+            </div>
             </div>
 
-            <!-- Correo Electrónico -->
-            <div class="form-group">
-                <label>Correo Electrónico</label>
-                <div class="input-container">
-                    <i class="fas fa-envelope"></i>
-                    <input type="email" required placeholder="Ej: nombre@gmail.com">
-                </div>
-            </div>
+
             <!-- Género -->
+            <label for="genero">Género</label>
             <div class="form-group">
-                <label>Género</label>
                 <div class="input-container">
                     <i class="fas fa-venus-mars"></i>
-                    <select required>
+                    <select id="genero" name="genero" required>
                         <option value="" disabled selected>Seleccione</option>
                         <option value="masculino">Masculino</option>
                         <option value="femenino">Femenino</option>
                     </select>
+                    <div class="error-message" id="generoError"></div>
                 </div>
             </div>
+
 
             <!-- Número de Cédula -->
+            <label for="cedula">Número de Cédula</label>
             <div class="form-group">
-                <label>Número de Cédula</label>
                 <div class="input-container">
                     <i class="fas fa-id-card"></i>
-                    <input type="text" required placeholder="Ej: 1234567890" pattern="[0-9]{10}" title="Ingrese 10 dígitos">
+                    <input type="text" id="cedula" name="cedula" required maxlength="10" placeholder="Ej: 1234567890">
+                    <div class="error-message" id="cedulaError"></div>
                 </div>
             </div>
-
             <!-- País -->
+            <label for="pais">País</label>
             <div class="form-group">
-                <label>País</label>
                 <div class="input-container">
                     <i class="fas fa-globe-americas"></i>
-                    <select required>
+                    <select id="pais" name="pais" required>
                         <option value="" disabled selected>Seleccione</option>
                         <option value="ecuador">Ecuador</option>
                         <option value="colombia">Colombia</option>
                         <option value="peru">Perú</option>
-                        <option value="mexico">México</option>
-                        <option value="argentina">Argentina</option>
                     </select>
-
+                    <div class="error-message" id="paisError"></div>
                 </div>
             </div>
-
             <!-- Teléfono -->
+            <label for="telefono">Teléfono</label>
             <div class="form-group">
-                <label>Teléfono</label>
                 <div class="input-container">
                     <i class="fas fa-phone"></i>
-                    <input type="tel" required placeholder="Ej: 0991234567">
+                    <input type="tel" id="telefono" name="telefono" required placeholder="0998548952">
+                    <div class="error-message" id="telefonoError"></div>
                 </div>
             </div>
-
             <!-- Dirección -->
+            <label for="direccion">Dirección</label>
             <div class="form-group">
-                <label>Dirección</label>
                 <div class="input-container">
                     <i class="fas fa-map-marker-alt"></i>
-                    <input type="text" required placeholder="Ej: Av. Principal 123">
-                </div>
+                    <input type="text" id="direccion" name="direccion" required placeholder="Ej: Calle Principal 2">
+                <div class="error-message" id="direccionError"></div>
             </div>
-
+            </div>
             <!-- Fecha de Nacimiento -->
+            <label for="fechaNacimiento">Fecha de Nacimiento</label>
             <div class="form-group">
-                <label>Fecha de Nacimiento</label>
                 <div class="input-container">
                     <i class="fas fa-calendar-alt"></i>
-                    <input type="date" required>
+                    <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                    <div class="error-message" id="fechaNacimientoError"></div>
                 </div>
             </div>
-            <button type="submit">Registrar</button>
+            <button type="submit">Registrarse</button>
         </form>
     </div>
+    <script src="js/validar.js"></script>
 </body>
 </html>

@@ -80,3 +80,15 @@ button {
 button:hover {
     opacity: 0.9;
 }
+.error-message {
+    color: #e74c3c;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: none;
+}
+.input-container.error {
+    border-color: #e74c3c;
+}
+.input-container.success {
+    border-color: #2ecc71;
+}
